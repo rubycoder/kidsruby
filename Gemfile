@@ -1,6 +1,8 @@
 # A sample Gemfile
 source "http://rubygems.org"
 
+gem 'ffi', '1.0.11'    # 1.0.10 would not build on Windows
+
 gem 'qtbindings'
 gem 'htmlentities'
 gem 'rubywarrior-i18n'
