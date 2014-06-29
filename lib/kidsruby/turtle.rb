@@ -70,6 +70,7 @@ class Turtle
   def goto(x, y)
     add_command "jump(#{x}, #{y})"
   end
+  alias setpos goto
 
   def setheading(heading)
     add_command "angle(#{heading})"
@@ -78,18 +79,27 @@ class Turtle
   def forward(distance)
     add_command "go(#{distance})"
   end
+  alias fd forward
 
   def backward(distance)
     add_command "back(#{distance})"
   end
+  alias back backward
+  alias bk   backward
 
-  def turnleft(degrees)
+  def turnleft(degrees = 90)
     add_command "turn(#{-degrees.abs})"
   end
 
-  def turnright(degrees)
+  alias left turnleft
+  alias lt   turnleft
+
+  def turnright(degrees = 90)
     add_command "turn(#{degrees.abs})"
   end
+
+  alias right turnright
+  alias rt    turnright
 
   def draw
     add_command "draw();"
@@ -99,10 +109,12 @@ class Turtle
   def penup
     add_command "penup()"
   end
+  alias pu penup
 
   def pendown
     add_command "pendown()"
   end
+  alias pd pendown
 
   def text(string)
     add_command "text('#{string}')"
