@@ -35,7 +35,7 @@ class Turtle
       end
 
       $stderr.puts("command_turtle call failed: %s\n" % reply.error_message)
-    end  
+    end
     return nil
   end
 
@@ -138,7 +138,7 @@ class Turtle
 
   # colors
   def method_missing(method, *args, &block)
-    return COLORS[method.to_s]
+    COLORS[method.to_s] || super
   end
 
   def self.rgb(r, g, b)
