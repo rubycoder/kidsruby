@@ -1,6 +1,9 @@
 require_relative "../test_helper"
 require_relative "../../app/models/runner_writer"
 
+require 'minitest/reporters'
+MiniTest::Reporters.use!
+
 include KeyPressEventsTestHelper
 
 describe RunnerWriter do
@@ -12,7 +15,7 @@ describe RunnerWriter do
 
   describe "sending return key press" do
     it "must write the line to the runner" do
-      @runner.expects(:write).with("\n") 
+      @runner.expects(:write).with("\n")
       @runner_writer.keyPressEvent(return_key_press_event)
       @runner_writer.line.must_equal ""
     end

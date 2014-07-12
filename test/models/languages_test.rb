@@ -1,6 +1,9 @@
 require_relative "../test_helper"
 require_relative "../../app/models/languages"
 
+require 'minitest/reporters'
+MiniTest::Reporters.use!
+
 describe 'KidsRubyLanguages' do
   it "should default to 'en'" do
     KidsRuby::Language.default.must_equal 'en'

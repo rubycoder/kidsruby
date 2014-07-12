@@ -1,6 +1,9 @@
 require_relative "../test_helper"
 require_relative "../../app/models/inverts_theme"
 
+require 'minitest/reporters'
+MiniTest::Reporters.use!
+
 class DummyWidget
   include InvertsTheme
 
@@ -9,7 +12,7 @@ class DummyWidget
 
   def set_theme(theme)
     # This method must be implemented in any class that.
-    # includes the InvertsTheme module. 
+    # includes the InvertsTheme module.
   end
 end
 

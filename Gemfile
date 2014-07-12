@@ -17,8 +17,12 @@ group :development do
 end
 
 group :test do
+  if RUBY_PLATFORM =~ /(win32|w32)/
+    gem "win32console", '1.3.2'
+  end
   # only needed for testing
   gem 'rake', '0.8.7'
-  gem 'minitest', '~> 2.0'
-  gem 'mocha', '0.12.10', :require => false
+  gem 'minitest', '5.3.5'  # RubyMine supports minitest higher than 3.1.0
+  gem 'minitest-reporters', '1.0.4'  # RubyMine requires minitest-reporters 0.5.0 or higher
+  gem 'mocha', '1.1.0', :require => false
 end

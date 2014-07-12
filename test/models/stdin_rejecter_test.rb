@@ -1,6 +1,9 @@
 require_relative "../test_helper"
 require_relative "../../app/models/stdin_rejecter"
 
+require 'minitest/reporters'
+MiniTest::Reporters.use!
+
 include KeyPressEventsTestHelper
 
 describe StdinRejecter do

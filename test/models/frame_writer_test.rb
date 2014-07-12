@@ -1,6 +1,9 @@
 require_relative "../test_helper"
 require_relative "../../app/models/frame_writer"
 
+require 'minitest/reporters'
+MiniTest::Reporters.use!
+
 include KeyPressEventsTestHelper
 
 describe FrameWriter do

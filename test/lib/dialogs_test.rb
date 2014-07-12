@@ -1,5 +1,8 @@
 require_relative "../test_helper"
 
+require 'minitest/reporters'
+MiniTest::Reporters.use!
+
 describe 'dialogs' do
   before do
     @interface = mock('interface')
@@ -47,14 +50,14 @@ describe 'dialogs' do
       ask("anything").must_equal(@answer)
     end
   end
-  
+
   describe "gets" do
     it "must be able to get input" do
       # HACK TO MAKE THIS SPEC WORK
       # WITH `rake spec`
       ARGV.clear
       # END HACK
-     
+
       @answer = "hola"
       @reply.stubs(:value).returns(@answer)
       stdin = mock("standard input")

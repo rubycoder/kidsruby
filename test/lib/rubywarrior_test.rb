@@ -1,5 +1,8 @@
 require_relative "../test_helper"
 
+require 'minitest/reporters'
+MiniTest::Reporters.use!
+
 describe 'rubywarrior' do
   describe 'Game' do
     it "must be able to start" do
