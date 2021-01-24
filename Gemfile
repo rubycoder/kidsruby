@@ -1,7 +1,7 @@
 # A sample Gemfile
 source "http://rubygems.org"
 
-gem 'ffi', '1.0.11'    # 1.0.10 would not build on Windows
+gem 'ffi', '1.9.24'    # 1.0.10 would not build on Windows
 
 gem 'qtbindings'
 gem 'htmlentities'
